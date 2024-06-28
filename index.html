@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Click na Banana</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .banana {
+            cursor: pointer;
+            width: 150px;
+            height: auto;
+        }
+        .count {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo de Click na Banana</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg" alt="Banana" class="banana" onclick="incrementCount()">
+    <div class="count">Cliques: <span id="clickCount">0</span></div>
+
+    <script>
+        let clickCount = 0;
+        function incrementCount() {
+            clickCount++;
+            document.getElementById('clickCount').innerText = clickCount;
+        }
+    </script>
+</body>
+</html>
